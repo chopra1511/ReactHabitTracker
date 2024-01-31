@@ -16,7 +16,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 function Layout(props) {
   let navigate = useNavigate();
   const clickHandler = () => {
-    navigate("/");
+    navigate("/vite-react-router/");
   };
   let userName = localStorage.getItem("User");
 
@@ -34,7 +34,7 @@ function Layout(props) {
           <nav>
             <ul>
               <NavLink
-                to="/dashboard/home"
+                to="/vite-react-router/dashboard/home"
                 className={classes.link}
                 activeClassName={classes.activeLink}
               >
@@ -45,7 +45,10 @@ function Layout(props) {
                   <span>Home</span>
                 </li>
               </NavLink>
-              <NavLink to="/dashboard/stats" className={classes.link}>
+              <NavLink
+                to="/vite-react-router/dashboard/stats"
+                className={classes.link}
+              >
                 <li>
                   <span>
                     <BubbleChartRoundedIcon />
@@ -53,7 +56,10 @@ function Layout(props) {
                   <span>Stats</span>
                 </li>
               </NavLink>
-              <NavLink to="/dashboard/habits" className={classes.link}>
+              <NavLink
+                to="/vite-react-router/dashboard/habits"
+                className={classes.link}
+              >
                 <li>
                   <span>
                     <ElectricBoltRoundedIcon />
