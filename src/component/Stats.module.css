@@ -1,0 +1,65 @@
+.habits {
+  height: 87vh;
+  overflow-x: hidden;
+}
+
+.habits img {
+    padding-left: 15%;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4e4e4;
+  border-radius: 10px;
+  /* border: 1px dotted gray; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 185, 185);
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 60%;
+  min-height: 30%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekView{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    font-family: LEMON MILK Light;
+    text-align: center;
+}
+
+.count {
+  font-family: LEMON MILK Light;
+  margin: 0;
+  font-size: 15px;
+  /* position: absolute;
+  top: 0px;
+  left: 95%; */
+}
+
+.card h1 {
+  font-family: LEMON MILK;
+  font-size: 35px;
+  text-align: center;
+  word-wrap: break-word;
+  margin: 0;
+  background-color: #f8cf83;
+  padding-left: 10px;
+  padding-right: 10px;
+}
