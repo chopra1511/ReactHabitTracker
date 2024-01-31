@@ -10,7 +10,7 @@ function HomePage() {
   };
 
   const submitHandler = () => {
-      navigate("/vite-react-router/dashboard/home");
+      navigate("/ReactHabitTracker/dashboard/home");
     console.log(name);
       localStorage.setItem("User", name);
   };

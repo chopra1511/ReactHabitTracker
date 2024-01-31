@@ -16,7 +16,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 function Layout(props) {
   let navigate = useNavigate();
   const clickHandler = () => {
-    navigate("/vite-react-router/");
+    navigate("/ReactHabitTracker/");
   };
   let userName = localStorage.getItem("User");
 
@@ -34,7 +34,7 @@ function Layout(props) {
           <nav>
             <ul>
               <NavLink
-                to="/vite-react-router/dashboard/home"
+                to="/ReactHabitTracker/dashboard/home"
                 className={classes.link}
                 activeClassName={classes.activeLink}
               >
@@ -46,7 +46,7 @@ function Layout(props) {
                 </li>
               </NavLink>
               <NavLink
-                to="/vite-react-router/dashboard/stats"
+                to="/ReactHabitTracker/dashboard/stats"
                 className={classes.link}
               >
                 <li>
@@ -57,7 +57,7 @@ function Layout(props) {
                 </li>
               </NavLink>
               <NavLink
-                to="/vite-react-router/dashboard/habits"
+                to="/ReactHabitTracker/dashboard/habits"
                 className={classes.link}
               >
                 <li>
