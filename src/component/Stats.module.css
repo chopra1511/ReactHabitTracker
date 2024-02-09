@@ -1,10 +1,15 @@
 .habits {
-  height: 87vh;
   overflow-x: hidden;
 }
 
-.habits img {
-    padding-left: 15%;
+.emptyImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyImg img{
+ width: 800px;
 }
 
 ::-webkit-scrollbar {
@@ -22,7 +27,7 @@
 }
 
 .card {
-  margin: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   min-width: 60%;
   min-height: 30%;
@@ -34,27 +39,36 @@
 .content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .weekView{
-    margin-top: 30px;
+    margin: 30px;
     display: flex;
     justify-content: space-around;
-    font-family: LEMON MILK Light;
     text-align: center;
 }
 
+.date{
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.days{
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
 .count {
-  font-family: LEMON MILK Light;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   font-size: 15px;
-  /* position: absolute;
-  top: 0px;
-  left: 95%; */
 }
 
 .card h1 {
-  font-family: LEMON MILK;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
   font-size: 35px;
   text-align: center;
   word-wrap: break-word;
@@ -62,4 +76,27 @@
   background-color: #f8cf83;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .emptyImg img{
+ width: 600px;
+ padding-left: 45px;
+}
+.card h1 {
+  font-size: 25px;
+}
+.weekView h2{
+  font-size: 18px;
+}
+.weekView h4{
+  font-size: 12px;
+}
+}
+
+@media (min-width: 481px) {
+.emptyImg img{
+ width: 650px;
+ padding-left: 45px;
+}
 }

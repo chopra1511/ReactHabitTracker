@@ -1,12 +1,14 @@
 import classes from "./Habits.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";
-// import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import IconButton from "@mui/material/IconButton";
 import { useDispatch, useSelector } from "react-redux";
 import { habitActions } from "../store/HabitSlice";
+import { useNavigate } from "react-router-dom";
 
 function Habits() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const habits = useSelector((state) => state.habit.habits);
   const bgColor = [
     "#dedaf4",
@@ -40,6 +42,13 @@ function Habits() {
                     }}
                   >
                     <DeleteIcon color="error" sx={{ fontSize: 40 }} />
+                  </IconButton>
+                  <IconButton
+                    onClick={() => {
+                      navigate("/ReactHabitTracker/dashboard/stats");
+                    }}
+                  >
+                    <ArrowRightIcon color="success" sx={{ fontSize: 40 }} />
                   </IconButton>
                 </div>
               </div>

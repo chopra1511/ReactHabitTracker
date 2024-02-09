@@ -1,20 +1,20 @@
 .habits {
-  margin-top: 20px;
-  height: 87vh;
-  overflow-x: scroll;
+  /* margin-top: 20px; */
+  overflow-x: hidden;
   display: grid;
-  grid-template-areas: 
-  "c1 c1 c2"
-  "c1 c1 c2"
-  "c3 c3 c3"
-  "c3 c3 c3";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 30px;
 }
 
-.habits img{
-    padding-left: 20%;
+.emptyImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyImg img{
+ width: 800px;
 }
 
 ::-webkit-scrollbar {
@@ -85,3 +85,31 @@
 }
 
 
+@media (max-width: 480px){
+.habits {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.emptyImg img{
+ width: 600px;
+ padding-left: 45px;
+}
+}
+
+@media (min-width: 481px){
+.habits {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.emptyImg img{
+ width: 650px;
+ padding-left: 45px;
+}
+}
+
+@media (min-width: 769px){
+.habits {
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  gap: 15px;
+}
+}

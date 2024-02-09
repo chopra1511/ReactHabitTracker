@@ -6,26 +6,26 @@ import { useDispatch } from "react-redux";
 import { habitActions } from "../store/HabitSlice";
 
 function CreateHabit() {
-    const dispatch = useDispatch();
-    const nameRef = useRef('');
-    
+  const dispatch = useDispatch();
+  const nameRef = useRef("");
 
-    const closeFormHandler = () => {
-        dispatch(habitActions.closeForm())
-    }
+  const closeFormHandler = () => {
+    dispatch(habitActions.closeForm());
+  };
 
   const submitHandler = (e) => {
-      e.preventDefault();
-      dispatch(habitActions.addHabits(
-          {
-              id: Math.random().toString(),
-              name: nameRef.current.value
-          }
-      ))
-      nameRef.current.value = '';
-      
-    };
-    
+    e.preventDefault();
+
+    dispatch(
+      habitActions.addHabits({
+        id: Math.random().toString(),
+        name: nameRef.current.value,
+      })
+    );
+
+    nameRef.current.value = "";
+  };
+
   return (
     <div className={classes.main}>
       <div>
@@ -36,7 +36,7 @@ function CreateHabit() {
       <h2>New Habit</h2>
       <form onSubmit={submitHandler}>
         <label htmlFor="habit-name">Title</label>
-        <input type="text" ref={nameRef} />
+        <input type="text" ref={nameRef} required />
         <button type="submit">Add</button>
       </form>
     </div>

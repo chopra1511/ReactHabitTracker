@@ -42,7 +42,12 @@ const WeekData = ({ status, id, day }) => {
 
   switch (hStatus) {
     case "Done":
-      icon = <CheckCircleIcon color="success" />;
+      icon = (
+        <CheckCircleIcon
+          color="success"
+          
+        />
+      );
 
       break;
     case "Not Done":
@@ -50,7 +55,9 @@ const WeekData = ({ status, id, day }) => {
 
       break;
     default:
-      icon = <RadioButtonUncheckedIcon />;
+      icon = (
+        <RadioButtonUncheckedIcon  />
+      );
   }
 
   return <IconButton onClick={statusHandler}>{icon}</IconButton>;

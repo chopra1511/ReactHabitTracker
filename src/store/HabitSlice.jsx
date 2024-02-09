@@ -4,6 +4,7 @@ import reverseDate from "../component/week";
 const initialState = {
   habits: [],
   showAddHabit: false,
+  showSideMenu: false,
   weeks: reverseDate,
 };
 
@@ -16,6 +17,12 @@ const habitSlice = createSlice({
     },
     closeForm(state) {
       state.showAddHabit = false;
+    },
+    openSideMenu(state) {
+      state.showSideMenu = true;
+    },
+    closeSideMenu(state) {
+      state.showSideMenu = false;
     },
     addHabits(state, action) {
       const newHabit = action.payload;

@@ -38,6 +38,7 @@ function displayTodayAndPrevious6Days() {
   date.push({
     id: 7,
     day: weeks[currentDate.getDay()].day,
+    date: currentDate.getDate(),
     status: "None",
   });
   for (var i = 1; i <= 6; i++) {
@@ -46,6 +47,7 @@ function displayTodayAndPrevious6Days() {
     date.push({
       id: 7 - i,
       day: weeks[previousDate.getDay()].day,
+      date: previousDate.getDate(),
       status: "None",
     });
     console.log(weeks[previousDate.getDay()].day, previousDate.getDate());

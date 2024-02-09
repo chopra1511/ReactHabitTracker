@@ -12,11 +12,13 @@ const Stats = () => {
   const dispatch = useDispatch();
   const habits = useSelector((state) => state.habit.habits);
   const week = useSelector((state) => state.habit.weeks);
-
+  console.log(week);
   return (
     <Layout>
+      <div className={classes.emptyImg}>
+        {habits.length === 0 && <img src={empty} alt="empty" />}
+      </div>
       <div className={classes.habits}>
-      {habits.length === 0 && <img src={empty} alt="empty" />}
         {habits.map((habit) => {
           return (
             <div className={classes.card} key={habit.id}>
@@ -36,8 +38,9 @@ const Stats = () => {
               <div className={classes.weekView}>
                 {week.map((day, index) => (
                   <div key={index}>
+                    <h2 className={classes.date}>{day.date}</h2>
                     <h4 className={classes.days}>{day.day}</h4>
-                    <WeekData status={day.status} id={habit.id} day={day.day}/>
+                    <WeekData status={day.status} id={habit.id} day={day.day} />
                   </div>
                 ))}
               </div>

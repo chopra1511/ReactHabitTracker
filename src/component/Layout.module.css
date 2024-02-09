@@ -2,108 +2,70 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "side header"
+    "side main";
 }
 
-.sideSect {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: LEMON MILK Light;
+.sideNavBar {
+  grid-area: side;
 }
 
-.sideSect img {
-  width: 125px;
-  cursor: pointer;
+.header {
+  background-color: white;
+  grid-area: header;
 }
 
-.user {
-  padding: 60px 0px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.user img {
-  width: 75px;
-  border-radius: 50%;
-  border: 2px dashed rgba(0, 0, 0, 0.26);
-  cursor: pointer;
-  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.591));
-}
-
-.user h2 {
-  margin-top: 5px;
-  font-size: 15px;
-  padding: 5px 10px;
-  background-color: #f8cf83;
-}
-
-.menu1,
-.menu2 {
-  width: 80%;
-  font-size: 12px;
-}
-
-.menu1 ul,
-.menu2 ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: none;
-  padding: 0;
-}
-
-.menu1 li,
-.menu2 li {
-  display: flex;
-  align-items: center;
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* .activeLink {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-} */
-
-
-
-.menu1 li span,
-.menu2 li span {
-  padding-left: 10px;
-  margin: 10px 5px;
-}
-
-.menu1 li:hover,
-.menu2 li:hover {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  font-family: LEMON MILK;
-  cursor: pointer;
-}
-
-
-.menu2 {
-  padding: 20px 0 20px;
-}
-
-.menu2 h2 {
-  font-size: 15px;
-  padding-left: 20px;
-}
-
-.sideSect2 {
-  height: 88vh;
-  margin-top: 20px;
+.main {
   background-color: #d1d1d1;
-  width: 95%;
-  border-radius: 25px;
+  grid-area: main;
   padding: 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+
+@media (max-width: 480px){
+  .dashboard {
+    grid-template-columns: 0px 1fr;
+  }
+  .main{
+    margin-left: 20px;
+  }
+  .sideNavBar{
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 481px){
+  .dashboard {
+    grid-template-columns: 0px 1fr;
+  }
+  .main{
+    margin-left: 20px;
+  }
+  .sideNavBar{
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 769px){
+  .dashboard {
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 20px 1fr;
+  }
+  .sideNavBar{
+    visibility: visible;
+  }
+  .main{
+    margin-left: 0px;
+  }
+  .header{
+    visibility: hidden;
+  }
+}
+
+
