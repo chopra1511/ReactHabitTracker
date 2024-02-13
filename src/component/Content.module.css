@@ -213,6 +213,10 @@
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid transparent;  /* creates padding around scroll thumb */
 }
+.createCard_content button {
+  text-decoration: none;
+  color: inherit;
+}
   
 }
 
@@ -302,6 +306,10 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .createCard_content button {
+  text-decoration: none;
+  color: inherit;
+}
 }
 
 @media (min-width: 1280px) {
